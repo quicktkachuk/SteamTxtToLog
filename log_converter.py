@@ -7,8 +7,8 @@ import os
 
 
 def log_converter():
-    log_path = 'C:\\Program Files (x86)\\Steam\\logs'
-    new_log_path = 'C:\\Users\\mattt\\Documents\\logs'
+    log_path = 'C:\\Program Files (x86)\\Steam\\logs'   # Defaul log path
+    new_log_path = ''   # INSERT DESIRED END LOCATION HERE
 
     if not os.path.exists(new_log_path):
         os.mkdir(new_log_path)
@@ -20,6 +20,7 @@ def log_converter():
                 for x in line:
                     new_log.write(x)
                 new_log.close()
+            file.close()
 
 
 log_converter()
